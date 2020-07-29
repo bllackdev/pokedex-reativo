@@ -11,10 +11,10 @@ import org.springframework.data.mongodb.util.BsonUtils;
 import reactor.core.publisher.Flux;
 
 @SpringBootApplication
-public class PokedevApplication {
+public class PokedexApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PokedevApplication.class, args);
+		SpringApplication.run(PokedexApplication.class, args);
 	}
 
 	@Bean
