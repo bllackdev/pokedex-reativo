@@ -1,12 +1,16 @@
-package com.bllackdev.pokedev.controller;
+package com.bllackdev.pokedex.controller;
 
-import com.bllackdev.pokedev.model.Pokemon;
-import com.bllackdev.pokedev.repository.PokedexRepository;
+import com.bllackdev.pokedex.model.Pokemon;
+import com.bllackdev.pokedex.model.PokemonEvent;
+import com.bllackdev.pokedex.repository.PokedexRepository;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+
+import java.time.Duration;
 
 @RestController
 @RequestMapping("/pokemons")
@@ -60,5 +64,12 @@ public class PokemonController {
     @DeleteMapping
     public Mono<Void> delereAllPokemons() {
         return repository.deleteAll();
+    }
+
+    @GetMapping(value = "/events", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    public Flux<PokemonEvent> getPokemonEvents() {
+        return Flux.interval(Duration.ofSeconds(5))
+                .map(val ->
+                        new PokemonEvent(val, "Evento de Pokemoon"));
     }
 }

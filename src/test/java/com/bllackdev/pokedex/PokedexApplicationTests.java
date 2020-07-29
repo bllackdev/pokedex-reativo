@@ -1,10 +1,10 @@
-package com.bllackdev.pokedev;
+package com.bllackdev.pokedex;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PokedevApplicationTests {
+class PokedexApplicationTests {
 
 	@Test
 	void contextLoads() {

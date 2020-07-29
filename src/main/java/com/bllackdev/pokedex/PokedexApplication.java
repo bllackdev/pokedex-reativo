@@ -1,13 +1,12 @@
-package com.bllackdev.pokedev;
+package com.bllackdev.pokedex;
 
-import com.bllackdev.pokedev.model.Pokemon;
-import com.bllackdev.pokedev.repository.PokedexRepository;
+import com.bllackdev.pokedex.model.Pokemon;
+import com.bllackdev.pokedex.repository.PokedexRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.mongodb.core.ReactiveMongoOperations;
-import org.springframework.data.mongodb.util.BsonUtils;
 import reactor.core.publisher.Flux;
 
 @SpringBootApplication
