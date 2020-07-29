@@ -47,7 +47,7 @@ public class PokemonController {
     }
 
     @DeleteMapping("{id}") // Deletar um por um
-    public Mono<ResponseEntity<Void>> deletePokemon(@PathVariable(value = "id"),
+    public Mono<ResponseEntity<Void>> deletePokemon(@PathVariable(value = "id")
                                                     String id,
                                                     @RequestBody Pokemon pokemon) {
         return repository.findById(id)
