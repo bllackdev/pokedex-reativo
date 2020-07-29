@@ -16,6 +16,14 @@ public class Pokemon {
     private String habilidade;
     private Double peso;
 
+    public Pokemon(String id, String nome, String categoria, String habilidade, Double peso) {
+        this.id = id;
+        this.nome = nome;
+        this.categoria = categoria;
+        this.habilidade = habilidade;
+        this.peso = peso;
+    }
+
     public String getId() {
         return id;
     }
